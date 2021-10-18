@@ -1,9 +1,14 @@
-import './App.css';
+// import './App.css';
+import Heading from "./components/Heading"
+import TaskForm from "./components/TaskForm"
+import TaskList from "./components/TaskList"
 
 function App() {
   return (
-    <div className="App">
-      holi
+    <div>
+      <Heading />
+      <TaskForm />
+      <TaskList />
     </div>
   );
 }
