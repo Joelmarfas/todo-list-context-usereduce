@@ -5,13 +5,14 @@ import { FaTrashAlt, FaEdit } from "react-icons/fa"
 
 const TaskList = () => {
 
-  const {tasks} = useContext(GlobalContext)
+  const {tasks, deleteTask} = useContext(GlobalContext)
   // const context = useContext(GlobalContext)
   console.log(tasks)
   // console.log(context) funcionaria con la linia 16
 
   return (
     <div className="flex justify-center">
+      <button onClick={()=> deleteTask()}>Delete All</button>
       <div className="w-6/12">
         {/* context.task.map .......... */}
         {tasks.map(task => (
