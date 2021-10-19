@@ -10,8 +10,10 @@ export default function appReducer(state, action) {
       tasks: [...state.tasks, action.payload]
     }
      case "DELETE_TASK":
+       console.log(state)
+       console.log(action.payload)
        return {
-         tasks: []
+         tasks: state.tasks.filter(task => task.id !== action.payload)
        }
        default:
          break;
