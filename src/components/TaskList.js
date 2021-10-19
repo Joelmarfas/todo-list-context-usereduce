@@ -24,9 +24,8 @@ const TaskList = () => {
               <h1>{task.title}</h1>
               <h6>{task.id}</h6>
             </div>  
-            <div>
-              
-              <Link to={`/edit/${task.id}`}  className="bg-gray-600 hover:bg-gray-500 py-2 px-4 mr-2" ><FaEdit/></Link>
+            <div className="flex items-center">
+              <Link to={`/edit/${task.id}`}  className="bg-gray-600 hover:bg-gray-500 py-2 px-4 mr-2 flex" ><FaEdit/></Link>
               {/* <button className="bg-gray-600 hover:bg-gray-500 py-2 px-4 mr-2"><FaEdit/></button> */}
               <button className="bg-red-600 hover:bg-red-500 py-2 px-4 mr-2" onClick={
                 () => deleteTask(task.id)
