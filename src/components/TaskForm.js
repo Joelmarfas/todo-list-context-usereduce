@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from "../context/GlobalContext"
+import {useHistory} from "react-router-dom"
 
 const TaskForm = () => {
   const {addTask} = useContext(GlobalContext);
   // console.log(context) // gracias a esto tenemos tasks y sus estados
+  const history = useHistory()
 
     const [task, setTask] = useState({
       title: "",
@@ -17,9 +19,10 @@ const TaskForm = () => {
   }
 
     const handleSubmit = (e) => {
-      e.preventDefault()
-      console.log(task)
-      addTask(task)
+      e.preventDefault();
+      // console.log(task)
+      addTask(task);
+      history.push("/");
     }
 
   return (

@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react"
 import appReducer from "./AppReducer"
+import {v4} from "uuid"
 
 const initialState = {
 
@@ -28,7 +29,7 @@ export const ContextProvider = ({ children }) => {
 
   const addTask = (task) => {
     // console.log(task)
-    dispatch({type: "ADD_TASK", payload: task })
+    dispatch({type: "ADD_TASK", payload: {...task, id: v4() }})
   };
 
   const deleteTask = () => {
