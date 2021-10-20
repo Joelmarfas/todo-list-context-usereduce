@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalContext"
 import {useHistory, useParams} from "react-router-dom"
 
 const TaskForm = () => {
-  const {addTask, tasks} = useContext(GlobalContext);
+  const {addTask, tasks, updateTask} = useContext(GlobalContext);
   // console.log(context) // gracias a esto tenemos tasks y sus estados
   const history = useHistory()
   const params = useParams()
@@ -28,7 +28,7 @@ const TaskForm = () => {
       
       addTask(task);
       } else {
-
+        updateTask(task)
       }
       history.push("/");
     };

@@ -23,11 +23,9 @@ export default function appReducer(state, action) {
           if (task.id === updatedTask.id) {
             task.title = updatedTask.title
             task.description = updatedTask.description
-
           }
             return task;
         });
-
 
        return {
          tasks: updatedTasks,
