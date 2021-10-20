@@ -15,7 +15,7 @@ const TaskForm = () => {
     });
 
     const handleChange = (e) => {
-      console.log(e.target.name, e.target.value) // solo dejo las llaves porque está el console.log, si no no sería necesario.
+      // console.log(e.target.name, e.target.value) // solo dejo las llaves porque está el console.log, si no no sería necesario.
       setTask({...task, [e.target.name]: e.target.value //los corchetes indican el que el usuario esté rellenando primero
     });
   }
@@ -23,19 +23,18 @@ const TaskForm = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       // console.log(task)
-
-      if(task.id) {
-      
-      addTask(task);
+      if  (task.id) {
+        updateTask(task);
       } else {
-        updateTask(task)
+        addTask(task);
       }
+
       history.push("/");
     };
 
     useEffect (() => {
      const taskFound = tasks.find(task => task.id === params.id)
-     console.log(taskFound)
+    //  console.log(taskFound)
 // aqui sustituimos el (params.id) inicial por el taskfound para saber si ya existe
       if (taskFound) {
         setTask(taskFound);
