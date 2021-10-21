@@ -4,7 +4,7 @@ import {v4} from "uuid"
 
 const initialState = {
 
-  tasks: JSON.parse(localStorage.getItem("tasksSaved"))
+  tasks: JSON.parse(localStorage.getItem("tasksSaved")) || []
 }
 
 export const GlobalContext = createContext (initialState);
