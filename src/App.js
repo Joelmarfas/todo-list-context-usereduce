@@ -12,23 +12,6 @@ import { ContextProvider } from "./context/GlobalContext"
 
 function App() {
 
-  // const [gifs, setGifs] = useState([]);
-
-  // console.log("Gifs: ", gifs);
-
-  // const getGifs = async () => {
-  //   const baseURL = ("https://api.giphy.com/v1/gifs/random?api_key=YEovNuiHI4JkifcrTf8s6ntiBH5mxeQC&tag=&rating=g")
-  //   const response = await axios.get(baseURL).catch((err) => console.log("Error", err))
-  //   console.log(response)
-
-  //   if(response && response.data) setGifs(response.data)
-    
-  // }
-
-  // useEffect(() => {
-  //   getGifs();
-  // }, []);
-
 
   return (
     <div>

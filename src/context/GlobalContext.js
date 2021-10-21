@@ -1,7 +1,6 @@
 import { createContext, useEffect, useReducer } from "react"
 import appReducer from "./AppReducer"
 import { v4 } from "uuid"
-import Axios from "axios"
 // import { AUTH_TOKEN } from "../api/AxiosAuth"
 
 const initialState = {
@@ -17,16 +16,18 @@ export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialState)
 
 
-  const APICall = async () => {
-    const APIResponse =
-    await Axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=YEovNuiHI4JkifcrTf8s6ntiBH5mxeQC&limit=25&rating=g`
-      )
-      console.log(APIResponse.data.data)
-  }
+//   const APICall = async () => {
+//     const APIResponse =
+//     await Axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=YEovNuiHI4JkifcrTf8s6ntiBH5mxeQC&limit=25&rating=g`
+//       )
+//       const apiAll = APIResponse.data.data
+//       console.log(apiAll)
+// return apiAll
+//   }
 
   useEffect (() => {
     localStorage.setItem("tasksSaved", JSON.stringify(state.tasks));
-    APICall();
+    // APICall();
   }, [state]);
 
 
@@ -49,7 +50,7 @@ export const ContextProvider = ({ children }) => {
     
 
   return (
-  <GlobalContext.Provider value={{ ...state, addTask, deleteTask, updateTask, toggleTaskDone, APICall }}>
+  <GlobalContext.Provider value={{ ...state, addTask, deleteTask, updateTask, toggleTaskDone }}>
     {children}
   </GlobalContext.Provider>
   );
