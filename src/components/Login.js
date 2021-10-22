@@ -1,8 +1,10 @@
 import React from 'react'
 import { Formik } from 'formik';
+import { useHistory } from "react-router-dom"
 
 function Login() {
 
+  const history = useHistory()
 
   return (
 
@@ -37,6 +39,7 @@ function Login() {
       onSubmit={(values) =>{
         console.log(values);
         // console.log("formulario enviado");
+        history.push("/")
       }}
     >
       {({values, errors, touched, handleSubmit, handleChange, handleBlur}) => ( //estructura renderer prop
@@ -86,7 +89,7 @@ function Login() {
           </div>
           {touched.password && errors.password && <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">{errors.password}</div>}
 
-          <button className="bg-green-600 w-full hover:bg-green-500 py-2 px-4 mt-5" type="submit">Login</button>
+          <button className="bg-green-600 w-full hover:bg-green-500 py-2 px-4 mt-5" type="submit">Log In</button>
         </form>
       )}
     </Formik>
