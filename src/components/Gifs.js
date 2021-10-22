@@ -43,6 +43,7 @@ return (
       gifs.map((gif) => (
         <div>
           <img src={gif.images.fixed_height.webp} alt="gif" />
+          <p>{gif.title}</p>
         </div>
       ))
     }
