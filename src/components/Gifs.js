@@ -38,7 +38,7 @@ function Gifs() {
   console.log(gifs)
   
 return (
-  <div>
+  <div className="grid grid-cols-5 gap-4">
     {
       gifs.map((gif) => (
         <div>

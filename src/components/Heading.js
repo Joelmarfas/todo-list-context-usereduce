@@ -11,17 +11,17 @@ const Heading = () => {
         </Link>
         <div className="flex-grow text-right px-4 py-2 m-2">
           <Link to="/add">
-            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center">
+            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold mx-2 py-2 px-4 rounded inline-flex items-center">
             <FaPlus /> Add Task
             </button>
           </Link>
           <Link to="/tasks">
-            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center">
+            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold mx-2 py-2 px-4 rounded inline-flex items-center">
             <FaPlus /> All tasks 
             </button>
           </Link>
           <Link to="/">
-            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded inline-flex items-center">
+            <button className="bg-green-400 hover:bg-green-500 text-white font-semibold mx-2 py-2 px-4 rounded inline-flex items-center">
             <FaPlus /> Gifs 
             </button>
           </Link>
