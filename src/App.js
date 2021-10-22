@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom"
 import Gifs from "./components/Gifs"
 
 import Heading from "./components/Heading"
+import Login from "./components/Login"
 import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList"
 
@@ -20,10 +21,11 @@ function App() {
           <ContextProvider>
               <Heading />
               <Switch>
-                <Route path="/tasks" component={TaskList} exact />
+                <Route path="/tasks" component={TaskList} />
                 <Route path="/add" component={TaskForm}/>
                 <Route path="/edit/:id" component={TaskForm}/>
-                <Route path="/" component={Gifs}/>
+                <Route path="/" component={Gifs} exact/>
+                <Route path="/login" component={Login}/>
               </Switch>
           </ContextProvider>
         </div>
