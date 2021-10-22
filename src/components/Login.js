@@ -9,7 +9,8 @@ function Login() {
     <Formik 
       initialValues={{
         name: "",
-        email: ""
+        email: "",
+        password:""
 
       }}
       validate={(values) => {
@@ -38,7 +39,7 @@ function Login() {
         // console.log("formulario enviado");
       }}
     >
-      {({values, errors,touched, handleSubmit, handleChange, handleBlur}) => ( //estructura renderer prop
+      {({values, errors, touched, handleSubmit, handleChange, handleBlur}) => ( //estructura renderer prop
         <form className="bg-gray-900 p-10" onSubmit={handleSubmit}>
           {/* {console.log(errors)} */}
           {/* {console.log(touched)} */}
@@ -46,12 +47,12 @@ function Login() {
             <label htmlFor="name">Name: </label>
             <input 
               className="py-3 px-4 focus:outline-none focus:text-gray-100 bg-gray-700 w-full"
-              type="text" 
-              id="name" 
-              name="name" 
-              placeholder="Your full name" 
-              value={values.name} 
-              onChange={handleChange} 
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your nme here"
+              value={values.name}
+              onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
@@ -60,12 +61,12 @@ function Login() {
             <label htmlFor="email">Email: </label>
             <input 
               className="py-3 px-4 focus:outline-none focus:text-gray-100 bg-gray-700 w-full"
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="example@example.com" 
-              value={values.email} 
-              onChange={handleChange} 
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email here (example@example.com)"
+              value={values.email}
+              onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
@@ -74,12 +75,12 @@ function Login() {
             <label htmlFor="email">Passwrod: </label>
             <input 
               className="py-3 px-4 focus:outline-none focus:text-gray-100 bg-gray-700 w-full"
-              type="password" 
-              id="password" 
-              name="password" 
-              placeholder="xxxxxxxxxx" 
-              value={values.password} 
-              onChange={handleChange} 
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Your password"
+              value={values.password}
+              onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
