@@ -29,7 +29,7 @@ const TaskForm = () => {
         addTask(task);
       }
 
-      history.push("/");
+      history.push("/tasks");
     };
 
     useEffect (() => {

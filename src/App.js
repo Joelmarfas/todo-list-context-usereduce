@@ -20,10 +20,10 @@ function App() {
           <ContextProvider>
               <Heading />
               <Switch>
-                <Route path="/" component={TaskList} exact />
+                <Route path="/tasks" component={TaskList} exact />
                 <Route path="/add" component={TaskForm}/>
                 <Route path="/edit/:id" component={TaskForm}/>
-                <Route path="/gifs" component={Gifs}/>
+                <Route path="/" component={Gifs}/>
               </Switch>
           </ContextProvider>
         </div>
