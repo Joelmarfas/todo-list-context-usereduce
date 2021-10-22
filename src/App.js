@@ -19,12 +19,12 @@ function App() {
       <div className="h-screen text-white text-center p-10">
         <div className="container mx-auto h-full">
           <ContextProvider>
-              <Heading />
+              {/* <Heading /> */}
               <Switch>
-                <Route path="/tasks" component={TaskList} />
-                <Route path="/add" component={TaskForm}/>
-                <Route path="/edit/:id" component={TaskForm}/>
-                <Route path="/" component={Gifs} exact/>
+                <Route path="/tasks" render={(props) => <div><Heading /> <TaskList {...props} /> </div> } />
+                <Route path="/add" render={(props) => <div><Heading /> <TaskForm {...props} /> </div> }  />
+                <Route path="/edit/:id" render={(props) => <div><Heading /> <TaskForm {...props} /> </div> }/>
+                <Route path="/" render={(props) => <div><Heading /> <Gifs {...props} /> </div> } exact/>
                 <Route path="/login" component={Login}/>
               </Switch>
           </ContextProvider>
