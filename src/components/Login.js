@@ -39,7 +39,8 @@ function Login() {
       onSubmit={(values) =>{
         console.log(values);
         // console.log("formulario enviado");
-        history.push("/")
+        history.push("/");
+        localStorage.setItem("user", JSON.stringify(values));
       }}
     >
       {({values, errors, touched, handleSubmit, handleChange, handleBlur}) => ( //estructura renderer prop
