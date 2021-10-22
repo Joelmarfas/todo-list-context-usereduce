@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import { GlobalContext } from "../context/GlobalContext"
 import Axios from "axios"
+import GiftCard from './GiftCard'
 
 
   // const [gifs, setGifs] = useState([]);
@@ -42,8 +43,7 @@ return (
     {
       gifs.map((gif) => (
         <div>
-          <img src={gif.images.fixed_height.webp} alt="gif" />
-          <p>{gif.title}</p>
+          <GiftCard gif={gif}/>
         </div>
       ))
     }
